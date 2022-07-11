@@ -1,0 +1,10 @@
+<header>
+    <nav>
+        <div class="left__header">
+            Welcome {{(currentUser$ | async)?.firstName}}!
+        </div>
+        <div class="right__header">
+            <button class="btn__primary" (click)="logout()">Logout</button>
+        </div>
+    </nav>
+</header>

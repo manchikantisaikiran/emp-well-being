@@ -1,0 +1,37 @@
+<div class="login__form">
+    <!-- <img src="assets/images/logo.png"> -->
+    <h2>Welcome back</h2>
+    <p>Sign in to continue</p>
+    <form [formGroup]="form">
+        <div class="form__group">
+            <label>
+                <span>Username</span>
+                <i class="text-danger">*</i>
+            </label>
+            <div>
+                <input type="text" formControlName="Username" name="Username" autocomplete/>
+                <div class="text-danger text-start">
+                    <ng-container *ngIf="isFormSubmitted && form.controls['Username']?.errors?.['required']">Email is required!</ng-container>
+                    <ng-container *ngIf="isFormSubmitted && form.controls['Username']?.errors?.['pattern']">Enter valid Email!</ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="form__group">
+            <label>
+                <span>Password</span>
+                <i class="text-danger">*</i>
+            </label>
+            <div>
+                <input type="password" formControlName="Password" name="Password" autocomplete/>
+                <div class="text-danger text-start">
+                    <ng-container *ngIf="isFormSubmitted && form.controls['Password']?.errors?.['required']">Password is required!</ng-container>
+                    <ng-container *ngIf="isFormSubmitted && form.controls['Password']?.errors?.['pattern']">Enter a strong password!</ng-container>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn__primary btn__login" (click)="login()">
+            <span>Login</span>
+            <div *ngIf="loading$ | async" class="spinner-border spinner-border-sm" role="status"></div>
+        </button>
+    </form>
+</div>

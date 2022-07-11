@@ -1,0 +1,19 @@
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    gap: 0 0.6rem;
+    padding: 16px 24px;
+    border: none;
+}
+
+.btn__primary{
+    background-color: #30aaf4;
+    color: white;
+}

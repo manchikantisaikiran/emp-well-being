@@ -1,0 +1,11 @@
+@import "src/shared/styles/button.scss";
+
+header {
+  padding: 1rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

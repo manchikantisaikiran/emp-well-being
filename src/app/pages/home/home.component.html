@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+
+<div class="container mt-3" [ngClass]="{'d-none':(Loading$ | async) }">
+    <div class="charts__container">
+        <div class="card">
+            <div class="ship__mode__pie" id="ship-mode-pie"></div>
+        </div>
+        <div class="card">
+            <div class="category__pie" id="category-pie"></div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="region__sales" id="region-sales"></div>
+    </div>
+    <div class="card">
+        <div class="monthly__sales" id="monthly-sales"></div>
+    </div>
+    <div class="card">
+        <div class="high__profits" id="high__profits"></div>
+    </div>
+    <div class="card">
+        <div class="least__profits" id="least__profits"></div>
+    </div>
+</div>
+
+<div class="loader" *ngIf="Loading$ | async"></div>

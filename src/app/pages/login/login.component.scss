@@ -1,0 +1,39 @@
+@import "src/shared/styles/button.scss";
+@import "src/shared/styles/input.scss";
+
+:host {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__form {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    form {
+        margin-top: 2rem;
+
+        .form__group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+
+            input {
+                min-width: 300px;
+            }
+        }
+
+        .btn__login {
+            margin: auto
+        }
+    }
+}
